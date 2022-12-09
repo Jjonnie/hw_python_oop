@@ -313,15 +313,15 @@ def read_package(workout_type: str, data: list) -> Training:
     данные о данной тренировки.
     """
 
-    training_dictory: dict[str, str] = {'RUN': Running,
-                                        'WLK': SportsWalking,
-                                        'SWM': Swimming}
+    training_dictory: dict[str, type[Training]] = {'RUN': Running,
+                                                   'WLK': SportsWalking,
+                                                   'SWM': Swimming}
 
     if workout_type in training_dictory:
         training = training_dictory[workout_type](*data)
         return training
     else:
-        print('Данный вид тренировки отсутствует')
+        raise KeyError(f'Тренировка {workout_type} отсутствует')
 
 
 def main(training: Training) -> None:
