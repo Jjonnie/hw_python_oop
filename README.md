@@ -15,7 +15,7 @@
 1. Клонировать удаленный репозиторий к себе на ПК.
 2. Создать и активировать виртуальное окружение:
    - 'python -m venv venv'
-   - 'source venv/scripts/activate'
+   - 'source venv/Scripts/activate'
 3. Установить нужное окружения из файла requirements.txt находясь в репозитории проекта через терминал:
    - 'pip install -r requirements.txt'
 4. Запустить модуль через терминал:
